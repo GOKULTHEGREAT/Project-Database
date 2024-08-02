@@ -1,0 +1,60 @@
+/* Basic styling for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-right: 20px; /* Adds spacing between dropdowns */
+}
+
+.dropdown-toggle {
+    padding: 10px;
+    background-color: #1d7af3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.dropdown-menu input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.dropdown-menu label {
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu label:hover {
+    background-color: #ddd;
+}
+
+.dropdown.show .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle .fa-chevron-down {
+    transition: transform 0.3s;
+}
+
+.dropdown.show .dropdown-toggle .fa-chevron-down {
+    transform: rotate(180deg);
+}
